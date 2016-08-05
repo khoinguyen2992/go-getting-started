@@ -1,0 +1,5 @@
+src/ginserver/vendor/
+src/ginserver/.env
+src/github.com
+src/golang.org
+src/gopkg.in
