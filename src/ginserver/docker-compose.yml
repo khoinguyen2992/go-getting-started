@@ -1,0 +1,17 @@
+mongodb:
+  container_name: mongodb
+  image: mongo:3.2.4
+  ports:
+    - "27017:27017"
+
+ginserver:
+  container_name: ginserver
+  build: ./
+  env_file:
+    - ./.env
+  volumes:
+    - "./:/go/src/ginserver"
+  ports:
+    - "9010:3000"
+  links:
+    - mongodb
